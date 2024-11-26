@@ -1,0 +1,18 @@
+<div class="auth-container">
+  <h1>Login</h1>
+  <form (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Username</mat-label>
+      <input matInput [(ngModel)]="username" name="username" required />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Password</mat-label>
+      <input matInput [(ngModel)]="password" name="password" type="password" required />
+    </mat-form-field>
+    <button mat-raised-button color="primary">Login</button>
+  </form>
+  <div class="register-link">
+    <p>Don't have an account?</p>
+    <button mat-button color="accent" (click)="redirectToRegister()">Create an Account</button>
+  </div>
+</div>
